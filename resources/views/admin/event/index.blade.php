@@ -94,11 +94,5 @@
     </aside>
     <!-- /.control-sidebar -->
     </div>
-    <script>
-        $(document).ready(function() {
-         setInterval(function() {
-          $('#list').load('{{ action('admin.event.index') }}');
-         }, 5000);
-        });
-       </script>
+
 @endsection

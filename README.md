@@ -88,6 +88,6 @@ g) удаление события создателем.
 секунд, по возможности, без перезагрузки страницы.
 При клике на участника показывается экран информации об участнике в
 произвольном виде.
+<img src="https://github.com/Null-ch/SWC_laravel_test_task/assets/65172872/db812f91-8c02-4516-b6f1-d821a3a2b4a1">
 
-<img src="https://github.com/Null-ch/SWC_laravel_test_task/assets/65172872/01eabaca-7138-4fcd-9d99-9c630060e247">
 

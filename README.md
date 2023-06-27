@@ -8,7 +8,7 @@
 
 Склонируйте проект в директорию с сервером:
 
-`git clone git@github.com:Null-ch/git@github.com:Null-ch/SWC_laravel_test_task.git`
+`git clone git@github.com:Null-ch/SWC_laravel_test_task.git`
 
 Создайте базу данных на сервере и заполните поля файла .env, находящийся в папке проекта по примеру:
 

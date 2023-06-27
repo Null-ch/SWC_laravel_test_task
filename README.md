@@ -93,4 +93,19 @@ g) удаление события создателем.
 произвольном виде.
 <img src="https://github.com/Null-ch/SWC_laravel_test_task/assets/65172872/db812f91-8c02-4516-b6f1-d821a3a2b4a1">
 
+Создание события
+<img src="https://github.com/Null-ch/SWC_laravel_test_task/assets/65172872/04082b55-2a9c-496c-b1ad-54781a9827af">
+Присоединяемся к событию
+<img src="https://github.com/Null-ch/SWC_laravel_test_task/assets/65172872/c195c2bd-e7dd-4967-83e4-61df63afcf99">
+Редактирование события (если вы его создатель)
+<img src="https://github.com/Null-ch/SWC_laravel_test_task/assets/65172872/10524efc-2174-4b77-938f-81c94dac9e17">
+Удаление события (если вы являетесь его создателем)
+<img src="https://github.com/Null-ch/SWC_laravel_test_task/assets/65172872/b330642b-905c-4cba-81a5-a80bef91fb9d">
+Отказ от участия в событии
+<img src="https://github.com/Null-ch/SWC_laravel_test_task/assets/65172872/3a6c7b42-3e88-4802-a185-4787c1ad2c12">
+Просмотр информации о событии, переход на карточку участника события
+<img src="https://github.com/Null-ch/SWC_laravel_test_task/assets/65172872/851bf26c-07c1-4f7a-8f05-331a93fbd4a9">
+
+
+
 

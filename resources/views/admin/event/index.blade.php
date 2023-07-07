@@ -29,7 +29,7 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>Название события</th>
-                                            <th>Дата</th>
+                                            <th>Дата события</th>
                                             <th colspan="3">Действие</th>
                                         </tr>
                                     </thead>
@@ -38,7 +38,7 @@
                                             <tr>
                                                 <td>{{ $event->id }}</td>
                                                 <td>{{ $event->title }}</td>
-                                                <td>{{ $event->created_at }}</td>
+                                                <td>{{ $event->eventDate }}</td>
                                                 
                                                 @if ((int) auth()->user()->id == $event->creator_id)
                                                 <td class="text-center"><a

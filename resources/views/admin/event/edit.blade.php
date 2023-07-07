@@ -13,7 +13,7 @@
                             <div class="form-group w-50">
                                 <label>Название события</label>
                                 <input type="text" class="form-control" name="title" placeholder="Название события"
-                                    value="{{ old('title') }}">
+                                    value="{{ $event->title }}">
                                 @error('title')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
@@ -21,7 +21,7 @@
                             <div class="form-group w-50">
                                 <label>Описание события</label>
                                 <input type="text" class="form-control" name="content" placeholder="Название события"
-                                    value="{{ old('content') }}">
+                                    value="{{ $event->content }}">
                                 @error('content')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
@@ -29,7 +29,7 @@
                             <div class="form-group w-50">
                                 <label>Дата события</label>
                                 <input type="date" class="form-control" name="eventDate" placeholder="Название события"
-                                    value="{{ old('eventDate') }}">
+                                    value="{{ $event->eventDate }}">
                                 @error('eventDate')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror

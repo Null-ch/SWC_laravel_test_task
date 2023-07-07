@@ -14,17 +14,8 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
 
-    const ROLE_ADMIN = 0;
-    const ROLE_READER = 1;
-
     protected $dates = ['deleted_at'];
-    public static function getRoles()
-    {
-        return [
-            self::ROLE_ADMIN => 'Админ',
-            self::ROLE_READER => 'Читатель',
-        ];
-    }
+
     /**
      * The attributes that are mass assignable.
      *
@@ -54,7 +45,6 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
     

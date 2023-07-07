@@ -1,9 +1,11 @@
 <?php
 namespace App\Http\Controllers\API;
-use Illuminate\Http\Request;
-use App\Http\Controllers\API\BaseController as BaseController;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\API\BaseController as BaseController;
+
 class RegisterController extends BaseController
 {
     /**
@@ -14,18 +16,19 @@ class RegisterController extends BaseController
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required',
-            'c_password' => 'required|same:password',
+            'login'=> ['required', 'string', 'max:255', 'unique:users'],
+            'name' => ['required', 'string', 'max:255'],
+            'secondName' => ['required', 'string', 'max:255'],
+            'birthDate'=> '',
+            'password' => ['required', 'string', 'min:8'],
         ]);
         if($validator->fails()){
             return $this->sendError('Validation Error.', $validator->errors());       
         }
         $input = $request->all();
-        $input['password'] = bcrypt($input['password']);
+        $input['password'] = Hash::make($input['password']);
         $user = User::create($input);
-        $success['token'] =  $user->createToken('MyApp')->accessToken;
+        $success['token'] =  $user->createToken('EventsTable')->accessToken;
         $success['name'] =  $user->name;
         return $this->sendResponse($success, 'User register successfully.');
     }

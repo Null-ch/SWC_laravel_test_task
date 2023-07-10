@@ -27,6 +27,7 @@ class RegisterController extends BaseController
         }
         $input = $request->all();
         $input['password'] = Hash::make($input['password']);
+        
         $user = User::create($input);
         $success['token'] =  $user->createToken('EventsTable')->accessToken;
         $success['name'] =  $user->name;

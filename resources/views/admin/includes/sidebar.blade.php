@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a class="brand-link">
+    <a class="brand-link" style="margin-left: 15px" href="{{ route('admin.user.show', auth()->user()->id)}}">
         <span class="brand-text font-weight-light">{{auth()->user()->name}}</span>
     </a>
 
@@ -47,17 +47,6 @@
                         @endforeach
                     </ul>
                 </li>
-                @if ((int) auth()->user()->id == 1)
-                <li class="nav-item">
-                    <a href="{{ route('admin.users.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p>
-                            Пользователи
-                        </p>
-                    </a>
-                </li> 
-                @endif
-                
             </ul>
         </nav>
     </div>

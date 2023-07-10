@@ -2,20 +2,6 @@
 @section('content')
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <div class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                    </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Админ панель</a></li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <section class="content">
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->

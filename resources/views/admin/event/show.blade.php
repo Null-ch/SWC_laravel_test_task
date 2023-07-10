@@ -83,7 +83,6 @@
                                         <td><a href="{{ route('admin.user.show', $member->id)}}">{{$member->name}}</a></td>
                                     </tr>  
                                     @endforeach
-                                    
                                 </tbody>
                             </table>
                         </div>

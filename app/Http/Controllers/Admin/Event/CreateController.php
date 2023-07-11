@@ -6,7 +6,6 @@ namespace App\Http\Controllers\Admin\Event;
 use App\Models\User;
 use App\Models\Events;
 use App\Models\EventsUsers;
-use Illuminate\Console\Scheduling\Event;
 use App\Http\Controllers\Admin\Event\BaseController;
 
 class CreateController extends BaseController

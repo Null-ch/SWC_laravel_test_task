@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Http\Controllers\API;
+
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -16,21 +18,20 @@ class RegisterController extends BaseController
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'login'=> ['required', 'string', 'max:255', 'unique:users'],
+            'login' => ['required', 'string', 'max:255', 'unique:users'],
             'name' => ['required', 'string', 'max:255'],
             'secondName' => ['required', 'string', 'max:255'],
-            'birthDate'=> '',
+            'birthDate' => '',
             'password' => ['required', 'string', 'min:8'],
         ]);
-        if($validator->fails()){
-            return $this->sendError('Validation Error.', $validator->errors());       
+        if ($validator->fails()) {
+            return $this->sendError('Validation Error.', $validator->errors());
         }
         $input = $request->all();
         $input['password'] = Hash::make($input['password']);
-        
         $user = User::create($input);
-        $success['token'] =  $user->createToken('EventsTable')->accessToken;
+        $success['errors'] =  null;
         $success['name'] =  $user->name;
-        return $this->sendResponse($success, 'User register successfully.');
+        return $this->sendResponse($success, 'Вы успешно зарегистрированы!');
     }
 }

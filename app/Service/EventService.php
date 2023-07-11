@@ -12,7 +12,6 @@ class EventService
     {
         try {
             DB::beginTransaction();
-
             Events::firstOrCreate($data);
             DB::commit();
         } catch (Exception $exeption) {
